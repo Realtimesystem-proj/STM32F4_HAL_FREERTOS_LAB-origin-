@@ -45,7 +45,7 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-
+#define LED_PIN_MASK (GPIO_PIN_12 | GPIO_PIN_13 | GPIO_PIN_14 | GPIO_PIN_15)
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -97,7 +97,8 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   /* USER CODE BEGIN 2 */
-  printf("Don't remove this printf for debugging.\r\n");
+  printf("STM32F4 HAL + FreeRTOS lab initialized.\r\n");
+  printf("LED mask: 0x%04X\r\n", (unsigned int)LED_PIN_MASK);
 
   /* USER CODE END 2 */
 
